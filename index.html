@@ -1,0 +1,43 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>لفقيه ❤️</title>
+<style>
+body{margin:0;font-family:Arial,Tahoma,sans-serif;background:#fff8f5;color:#282226}.wrap{max-width:900px;margin:auto;padding:18px}.brand{text-align:center}.peeled-heart{width:78px;height:70px;margin:0 auto 7px;display:grid;place-items:center;
+font-size:52px;color:#b21f55;background:#f1c9a8;clip-path:polygon(8% 24%,18% 8%,34% 15%,50% 3%,67% 14%,84% 7%,95% 24%,88% 40%,96% 57%,82% 71%,70% 91%,51% 83%,34% 96%,20% 79%,5% 65%,13% 47%);
+border-radius:45% 55% 48% 52% / 50% 42% 58% 50%;box-shadow:0 6px 12px #8d3b4a22}
+.logo{text-align:center;font-size:36px;font-weight:900;color:#b21f55}.tag{text-align:center;color:#756b70;margin-bottom:25px}.card{background:#fff;border-radius:24px;padding:25px;margin:15px 0;box-shadow:0 8px 30px #4a182010;border:1px solid #f0dfe5}h1{text-align:center;font-size:32px}.hero{text-align:center;line-height:1.9}.btn{border:0;border-radius:14px;padding:14px 22px;font-size:16px;font-weight:bold;cursor:pointer;margin:5px}.pink{background:#b21f55;color:#fff}.light{background:#f8e7ee;color:#9d184b}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}label{font-weight:bold;font-size:14px}input,select{width:100%;padding:12px;border:1px solid #ead9df;border-radius:12px;margin-top:6px;font-size:15px;box-sizing:border-box}.hidden{display:none}.choice{border:1px solid #ecdde2;border-radius:18px;padding:15px;margin:10px 0;display:flex;justify-content:space-between;align-items:center}.verified{color:#16804f;font-weight:bold;font-size:13px}.price{font-size:28px;color:#b21f55;font-weight:900}.note{color:#746b70;line-height:1.7;font-size:13px}@media(max-width:650px){.grid{grid-template-columns:1fr}}
+</style></head><body><div class="wrap">
+<div class="brand">
+      <div class="peeled-heart" aria-label="شعار القلب">♥</div>
+      <div class="logo">لفقيه</div>
+    </div><div class="tag">تعارف جاد... بهدف الزواج</div>
+
+<section id="home" class="card hero"><h1>يمكن للشخص المناسب أن يكون أقرب مما تتوقع.</h1>
+<p>لفقيه خدمة وساطة للتعارف الجاد بهدف الزواج. الرجال يدخلون للخدمة بـ <b>50 درهم</b>، والبنات يدخلن بـ <b>20 درهم</b>.</p>
+<button class="btn pink" onclick="show('men')">أنا رجل — 50 DH</button><button class="btn light" onclick="show('women')">أنا امرأة — 20 DH</button>
+<p class="note">لا نبيع أرقام الهاتف أو المعلومات الشخصية. لا تتم مشاركة أي وسيلة تواصل إلا بموافقة صاحبها.</p></section>
+
+<section id="men" class="card hidden"><h2>دخول خدمة الرجال — 50 DH</h2><div class="price">50 DH</div><p>الأداء كيعطيك الحق تدخل للخدمة وتحصل على 5 اختيارات مناسبة.</p>
+<form onsubmit="menPay(event)"><div class="grid">
+<label>الاسم الأول<input id="mname" required></label><label>العمر<input id="mage" type="number" min="18" required></label>
+<label>المدينة<input id="mcity" required placeholder="طنجة"></label><label>الحالة العائلية<select><option>أعزب</option><option>مطلق</option><option>أرمل</option></select></label>
+<label>السن المطلوب من<input id="min" type="number" min="18" value="24"></label><label>السن المطلوب إلى<input id="max" type="number" min="18" value="35"></label>
+</div><br><button class="btn pink">متابعة إلى الأداء — 50 DH</button><button type="button" class="btn light" onclick="show('home')">رجوع</button></form>
+<p id="paymsg" class="note"></p></section>
+
+<section id="women" class="card hidden"><h2>دخول خدمة البنات — 20 DH ❤️</h2><p>رسوم الدخول 20 DH، والاختيار والموافقة ديالك دائماً بيدك.</p>
+<form onsubmit="womanDone(event)"><div class="grid">
+<label>الاسم الأول<input id="wname" required></label><label>العمر<input id="wage" type="number" min="18" required></label>
+<label>المدينة<input id="wcity" required placeholder="طنجة"></label><label>الحالة العائلية<select><option>عزباء</option><option>مطلقة</option><option>أرملة</option></select></label>
+<label>السن المطلوب من<input type="number" min="18" value="25"></label><label>السن المطلوب إلى<input type="number" min="18" value="38"></label>
+</div><br><label><input type="checkbox" required style="width:auto"> أوافق على قواعد الخصوصية والموافقة قبل مشاركة وسيلة التواصل.</label><br>
+<button class="btn pink">متابعة إلى الأداء — 20 DH</button><button type="button" class="btn light" onclick="show('home')">رجوع</button></form><p id="wmsg" class="note"></p></section>
+
+<section id="matches" class="card hidden"><h2>5 اختيارات مناسبة ❤️</h2><p class="note">هذه نماذج تجريبية فقط. في النسخة الحقيقية الاختيارات غادي تتحدد حسب بيانات المستخدمين الحقيقيين.</p><div id="list"></div>
+<p class="note">اختار شخصاً واحداً. لن تظهر أي وسيلة تواصل قبل أخذ موافقته/موافقتها.</p><button class="btn light" onclick="show('home')">العودة للرئيسية</button></section>
+</div>
+<script>
+function show(id){document.querySelectorAll('section').forEach(x=>x.classList.add('hidden'));document.getElementById(id).classList.remove('hidden');scrollTo(0,0)}
+function menPay(e){e.preventDefault();document.getElementById('paymsg').innerHTML='💳 <b>نموذج أداء تجريبي:</b> هنا غادي نربطو بوابة الأداء الحقيقية. من بعد نجاح الأداء غادي تفتح 5 اختيارات.';setTimeout(()=>{show('matches');render()},500)}
+function womanDone(e){e.preventDefault();document.getElementById('wmsg').innerHTML='✅ نموذج أداء تجريبي: هنا غادي نربطو بوابة الأداء الحقيقية. بعد التحقق يمكن أن يظهر لك رمز <span class="verified">✓ لفقيه موثقة</span>.'}
+function render(){let a=[['سارة','28','طنجة'],['مريم','30','تطوان'],['إيمان','27','طنجة'],['هبة','29','أصيلة'],['سلمى','31','طنجة']];document.getElementById('list').innerHTML=a.map(x=>`<div class="choice"><div><b>👩 ${x[0]} — ${x[1]} سنة</b><br><span class="note">📍 ${x[2]} • تبحث عن زواج جاد</span><br><span class="verified">✓ لفقيه موثقة</span></div><button class="btn pink" onclick="choose('${x[0]}')">أختار ❤️</button></div>`).join('')}
+function choose(n){alert('تم تسجيل اختيارك: '+n+'\nفي الخدمة الحقيقية سنتواصل معها أولاً ونطلب موافقتها قبل مشاركة أي وسيلة تواصل.')}
+</script></body></html>
